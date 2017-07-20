@@ -1,18 +1,20 @@
-\documentclass[margin=1in, 10pt]{res}  
+\documentclass[10pt]{res}  
 \setlength{\textheight}{9.5in}
 \usepackage[table]{xcolor}
-\usepackage{fullpage} 
+\usepackage[lmargin=0.5in, rmargin=1in, tmargin=0.5in, bmargin=0.5in]{geometry}
 \begin{document}
 \name{Anthony Hicks III}
 \address{www.anthonyhicksiii.com \\ https://github.com/TheRealMingo}
 \address{anthony@anthonyhicksiii.com}
 
+\setlength\itemsep{0em}
+
 \begin{resume}
 \section{Education}
-	Illinois Institute of Technology \hspace{53pt}
+	Illinois Institute of Technology \hfill
 	{\centering Computer Science} 
 	 \hfill December 2017 \\
-	Master's of Science and Bachelor's of Science Program \\
+	Master's of Science and Bachelor's of Science \\
 	Applied Mathematics Minor \\
 	Cumulative GPA: 3.07/4.0 \hfill
 	Major GPA: 3.0/4.0 
@@ -23,24 +25,24 @@
 	\begin{itemize}
 		\item Created several Android Applications under the developer name Mingo Technology for in Google Play Store
 		\item Signed a contract with Greenville Public School District in 2012 to create Android Applications for all the schools in their district, approximately 13 schools. 
-		\item Physics: Mechanics, an application created in 2012 that acts as a physics calculator. Users input known variables to an equation and the application solves for the unknown variable. The application also includes a physics dictionary for several common physics terms. 
-		\item Unit Convertor, an application that allows users to convert measures from unit to unit for several quantities, including but not limited to weight, height, temperature, speed, and time. 
+		\item \textbf{Physics:Mechanics}, an application created in 2012 that acts as a physics calculator. Users input known variables to an equation and the application solves for the unknown variable. The application also includes a physics dictionary for several common physics terms. 
+		\item \textbf{Unit Converter}, an application that allows users to convert measurement from one unit to another unit for several quantities, including but not limited to weight, height, temperature, speed, and time. 
 	\end{itemize} 
 \textbf{\textit{Web Development}}
 	\begin{itemize}
-		\item RealTexting.net, currently discounted, was a website that was created to allow users to sent messages to phones from the websites. The website was hosted on as a Microsoft Azure Web App, written in ASP.NET MVC C\#, and use backed by a SQL Server website. The website worked for carriers in the US and Canada before being discount. 
-		\item AnthonyHicksIII.com, my personal website written by me in PHP using the Foundation CSS Framework and the Slick JavaScript Framework.
+		\item \textbf{RealTexting.net}, currently discounted, was a website that allowed users to send messages from the website to phones. The website was hosted as a Microsoft Azure Web App, written in ASP.NET MVC C\#, and was backed by a SQL Server database. The website worked for carriers in the US and Canada before being discontinued. 
+		\item \textbf{AnthonyHicksIII.com}, my personal website written by me. The backend is written in PHP. The front-end is written using HTML5, CSS3, and JavaScript. The website also uses jQuery, the Foundation CSS Framework, and the Slick JavaScript library.
 	\end{itemize}
 \textbf{\textit{Class Projects}}
 	\begin{itemize}
-		\item REST API for Advertisers, created a RESTful api in Java using the Jersey Framework and Tomcat. The api allowed advertisers to but an advertisement listing on a website for a certain category on a website. The api also allowed the advertsiers to delete listings. The RESTful service supported GET, POST, PUT, and DELETE requests.  
+		\item \textbf{REST API for Advertisers}, created a REST API application in Java using Jersey and Tomcat. The API allows advertisers to put an advertisement listing on a website for a certain category to be displayed on website, similar to Google and Amazon Ads.The API also allows the advertsiers to delete listings. The REST service supports GET, POST, PUT, and DELETE requests.  
 	\end{itemize} 
 
 \section{Experience}
 	\textbf{\textit{Software Engineering Intern at HERE}}
 	\hfill{\bf 05/2017 - Present}
 	\begin{itemize}
-		\item Creating Scala applications,using the IntelliJ IDE and Gradle as the build tool, that creates statistics from a large data set and give those statistics to a service to be used by other users. 
+		\item Creating Scala applications, using the IntelliJ IDE and Gradle as the build tool, that creates statistics from a large data set and give those statistics to a service to be used by other users. 
 \item Work in an agile environment, help plan sprints and create user stories, and participate in daily scrum sessions. 
 	\end{itemize}
 \textbf{\textit{Expert for CodeMentor.io}}
@@ -51,23 +53,22 @@
 	\textbf{\textit{Software Engineering Intern at HERE}}
 	\hfill {\bf 05/2016 - 08/2016}
 	\begin{itemize}
-	    \setlength\itemsep{0em}
-	\item Worked in an alige environment, helped plan sprints and created user stories, and participated in daily scrum sessions. 
-	  \item Created a Scala application that when given a Google Protocol Buffer randomly added attributes to the Protocol Buffer 
- and populated them with values, so that the new Protocol Buffer could test the robustness of various applications to non-breaking changes.
+	  \item Created a Scala application, using the IntelliJ IDE and SBT as the build tool, that randomly added attributes to Google Protocol Buffers 
+ and populated them with values, allowed users to test the robustness of their applications to non-breaking changes.
 	\item The application pulled its data from an AWS S3 bucket and send data back into the bucket
+\item Worked in an agile environment, helped plan sprints and created user stories, and participated in daily scrum sessions. 
 	\end{itemize}  
 	\textbf{\textit{IT Intern at Marathon Petroleum Corporation}} \hfill {\bf 05/2015 - 08/2015}
 	\begin{itemize}
   \setlength\itemsep{0em}
-	  \item Built ASP.NET MVC C\# Application that allows users to remotely edit the configuration of other applications 
-	  \item Debugged previous created ASP.NET applications
+	  \item Built an ASP.NET MVC C\# application that allows users to edit the configuration of applications installed on remote servers.
+	  \item Debugged others' ASP.NET applications.
 \end{itemize}
 
 	\textbf{\textit{Teacher Assistant for IIT Computer Science Department}} 
 	\hfill {\bf 08/2013 - 12/2016}
 	\begin{itemize}
-	  \item Helped teach the introductory Object-Oriented courses and Computer Organization and Assembly Language course, graded papers, and provided one-on-one tutoring for students. 
+	  \item Helped teach the introductory Object-Oriented courses and the Computer Organization and Assembly Language course, graded papers, and provided one-on-one tutoring for students. 
 	\end{itemize}
 	
 	\textbf{\textit{Member of Illinois Institute of Technology Stars Computing
@@ -78,7 +79,7 @@
 	  \item President of Organization from 08/2015 - 05/2016
 	  \item Taught Computer Science concepts to middle school and high school students  
 	  \item Mainly taught students who are underrepresented in Computer Science 
-	  \item Lead Review Sessions for Computer Science courses 
+	  \item Lead review sessions for Computer Science courses 
 	\end{itemize}
 	
 \section{Skills}
