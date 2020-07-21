@@ -1,5 +1,7 @@
 *.txt
-
 *.gz
 *.cls
 *.log
+*.aux
+*.latexmk
+*.fls
