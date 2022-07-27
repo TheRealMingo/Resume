@@ -5,3 +5,4 @@
 *.aux
 *.latexmk
 *.fls
+.DS_Store
