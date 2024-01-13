@@ -1,52 +1,65 @@
-\documentclass[10pt]{res}  
+\documentclass{res}  
 \setlength{\textheight}{9.5in}
 \usepackage[table]{xcolor}
 \usepackage[lmargin=0.5in, rmargin=1in, tmargin=0.5in, bmargin=0.5in]{geometry}
+\renewcommand{\familydefault}{cmss}
+
 \begin{document}
 \name{Anthony Hicks III}
 \address{www.anthonyhicksiii.com}
-\address{anthony@anthonyhicksiii.com}
+\address{ahicks3rd@gmail.com}
 
 \setlength\itemsep{0em}
 
 \begin{resume}
-\section{Technologies}
-\begin{tabular}{	l	l	l	l	l	l	l	l	l	l	l	}
-	Cassandra & Dynatrace & Git & Hadoop & Java & Linux & Python & Racket & Scala & Spark & Splunk
+\section{\large{Technologies}}
+\begin{tabular}{	l	l	l 	l	l	l	l	l	l	}
+	Cassandra  & Git  & Java & Kafka & Linux & Python & Racket & Scala & Spark
 \end{tabular}
 
-\section{Experience}
-	\textbf{\textit{Software Engineer at Google LLC}}
+\section{\large{Skills}}
+\begin{tabular}{	l 	l 	l 	l	l 	}
+	Big Data Processing & Functional Programming & NoSQL & Object-Oriented Programming & System Design
+\end{tabular}
+
+\section{\large{Experience}}
+	\textbf{Software Engineer at Google}
 	\hfill{\bf 07/2022 - Present}
-	
-	\textbf{\textit{Vice President - Software Engineering at JPMorgan Chase \& Co.}}
-	\hfill{\bf 02/2021 - 07/2022}
 	\begin{itemize}
-		\item Mentor and help guide junior developers and new hires on the team.
-		\item Responsible for debugging production issues as they arise and use tools such as Dynatrace and Splunk for
-assistance.
-		\item Responsible for integrating other APIs within our API to deliver more data to our customers as well as maintaining our average response time below 250 milliseconds.
-		\item Help with gathering requirements and prioritization to ensure we meet the expectations of our clients.
-		\item Help with architecting and coding the various applications that the platform supports, using various technologies
-including, Java, Python, Scala, Pivotal Cloud Foundry, Spark, and Hadoop.		
-		\item Help with DEI recruitment and retention events.
+		\item Maintain and create software to ensure and catch breaking changes to Google Search before they enter production.
+		\item Maintain and create stakeholder dashboards to track the number of breaking changes that are caught.
+		\item Lead the team in the creation of our first stakeholder process and onboarded the first user to our program.
+		\item Help automate the process of catching breaking changes that could affect Google Search's Generative AI.
 	\end{itemize}
 	
-	\textbf{\textit{Senior Associate - Software Engineer at JPMorgan Chase \& Co.}}
+	\textbf{Vice President - Software Engineering at JPMorgan Chase \& Co.}
+	\hfill{\bf 02/2021 - 07/2022}
+	\begin{itemize}
+		\item Mentored and helped guide junior developers and new hires on the team.
+		\item Was responsible for debugging production issues as they arose and used tools such as Dynatrace and Splunk for
+assistance.
+		\item Was responsible ensuring our application maintained an SLO of 250 milliseconds regardless of the number of features we added.
+		\item Helped with gathering requirements and prioritization to ensure we met the expectations of our clients.
+		\item Helped with architecting and coding the various applications that the platform supports, using various technologies
+including, Java, Python, Scala, Pivotal Cloud Foundry, Spark, and Hadoop.		
+		\item Helped with DEI recruitment and retention events.
+	\end{itemize}
+	
+	\textbf{Senior Associate - Software Engineer at JPMorgan Chase \& Co.}
 	\hfill{\bf 02/2020 - 02/2021}
 	\begin{itemize}
 		\item Was part of a select group of people within the firm to work on the SBA PPP Loans project, the project helped automate the process of getting government loans to small businesses for support during the Covid-19
 pandemic, we helped get more than \$30 billion in loans processed.
 		\item Lead the development of multiple Scala based Spark jobs that do analytics and create KPI reports from our
 primary application.
-		\item Helped improve the scalability of our application as the number of customers grew over 55 million.
+		\item Helped improve the scalability of our application as the number of customers grew over 55 million, ensuring our highly distributed system did not have an increase in latency as our customer size grew.
 		\item Helped create solutions that maintained our applications average response time at 250 milliseconds, as we surpassed more than 425 transactions per second.
 		\item Helped with software engineering recruitment efforts for the firm, as well as, helped plan and run DEI efforts.
-		\item Selected as one of about 30 participants for a weeklong professional program to better understand how to grow
+		\item Selected out of an estimate of 30 participants for a weeklong professional program to better understand how to grow
 as leader.
 	\end{itemize}
 
-	\textbf{\textit{Associate - Software Engineer at JPMorgan Chase \& Co.}}
+	\textbf{Associate - Software Engineer at JPMorgan Chase \& Co.}
 	\hfill{\bf 10/2017 - 02/2020}
 	\begin{itemize}
 		\item Helped build a Java Spring Boot application from scratch that aggregates data from multiple internal sources
@@ -58,47 +71,7 @@ to give customers financial insight into their spending and investing habits.
 		\item Taught multiple self-defense classes for internal employees.
 	\end{itemize}
 
-	\textbf{\textit{Software Engineering Intern at HERE Technologies}}
-	\vspace*{.25em}
-	\hfill{\bf 05/2017 - 08/2017}
-	\begin{itemize}
-		\item Created Scala applications, using the IntelliJ IDE and Gradle as the build tool, that creates statistics from a large dataset and give those statistics to a service to be used by other users. The application retrieves its data from multiple AWS S3 buckets and delivers the data through an API given by the service it uses. Git is used as the version control tool. 
-\item Worked in an agile environment, help plan sprints and create user stories, and participate in daily scrum sessions. 
-\item Launched and taught a 6 course self-defense class for HERE employees. 
-	\end{itemize}
-
-\textbf{\textit{Expert for CodeMentor.io}}
-	\vspace*{.25em}
-	\hfill{\bf 01/2017 - Present}
-	\begin{itemize}
-		\item Online mentor for those who need help with various coding problems and assignments. 
-	\end{itemize}
-	
-	\textbf{\textit{Software Engineering Intern at HERE Technologies}}
-	\vspace*{.25em}
-	\hfill {\bf 05/2016 - 08/2016}
-	\begin{itemize}
-	  \item Created a Scala application, using the IntelliJ IDE and SBT as the build tool, that randomly added attributes to Google Protocol Buffers. 
- and populated them with values, allowed users to test the robustness of their applications to non-breaking changes.Used Git for version control. 
-	\item The application pulled its data from an AWS S3 bucket and send data back into the bucket.
-\item Worked in an agile environment, helped plan sprints and created user stories, and participated in daily scrum sessions. 
-	\end{itemize}  
-	\textbf{\textit{IT Intern at Marathon Petroleum Corporation}} \hfill {\bf 05/2015 - 08/2015}
-	\vspace*{.25em}
-	\begin{itemize}
-  \setlength\itemsep{0em}
-	  \item Built an ASP.NET MVC C\# application that allows users to edit the configuration of applications installed on remote servers.
-	  \item Debugged others' ASP.NET applications.
-\end{itemize}
-
-	\textbf{\textit{Teacher Assistant for IIT Computer Science Department}} 
-	\vspace*{.25em}
-	\hfill {\bf 08/2013 - 12/2016}
-	\begin{itemize}
-	  \item Helped teach the introductory Object-Oriented courses along with the Computer Organization and Assembly Language course, graded papers, and provided one-on-one tutoring for students. 
-	\end{itemize}
-	
-	\section{Education}
+	\section{\large{Education}}
 	Illinois Institute of Technology \hfill
 	{\centering Computer Science} 
 	 \hfill August 2017 \\
@@ -109,10 +82,10 @@ to give customers financial insight into their spending and investing habits.
 	Cornell University \hfill September 2019 \\
 	Mahcine Learning Certificate
 	
-	\section{Study Abroad}
+	\section{\large{Study Abroad}}
 	East China Normal University \hfill Summer 2014  
 	
-	\section{Languages}
+	\section{\large{Languages}}
 	Chinese (Mandarin) - Limited Working Proficiency
 \end{resume}
 
