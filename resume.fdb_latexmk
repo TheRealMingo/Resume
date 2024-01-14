@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1705182756 "/Users/anthonyhicksiii/Projects/Resume/resume.tex" "resume.pdf" "resume" 1705182756 0
-  "/Users/anthonyhicksiii/Projects/Resume/resume.tex" 1705182756 4738 7f636d0980cc648c7950b5bd554414b2 ""
+["pdflatex"] 1705272611 "/Users/anthonyhicksiii/Projects/Resume/resume.tex" "resume.pdf" "resume" 1705272611 0
+  "/Users/anthonyhicksiii/Projects/Resume/resume.tex" 1705272610 4774 06571c2321748c61042a7e23542a8c6f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcss1000.tfm" 1136768653 1536 293044035fd171bb1d18cf655049b101 ""
@@ -32,7 +32,7 @@
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "res.cls" 1705175151 25064 12b8a9e558b35c7e7f7f5fb39bebb9a2 ""
   "resume.aux" 1705179917 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "resume.tex" 1705182756 4738 7f636d0980cc648c7950b5bd554414b2 ""
+  "resume.tex" 1705272610 4774 06571c2321748c61042a7e23542a8c6f ""
   (generated)
   "resume.aux"
   "resume.log"
