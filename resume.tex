@@ -1,91 +1,104 @@
-\documentclass{res}  
-\setlength{\textheight}{9.5in}
-\usepackage[table]{xcolor}
-\usepackage[lmargin=0.5in, rmargin=1in, tmargin=0.5in, bmargin=0.5in]{geometry}
-\renewcommand{\familydefault}{cmss}
+\documentclass[12pt]{moderncv}
+\moderncvcolor{blue}
+\moderncvstyle{banking}
+\nopagenumbers{}
+\usepackage{fullpage}
+
+\usepackage{enumitem}
+\usepackage{xpatch}
+\makeatletter
+	\xpatchcmd{\makehead}
+	{\hspace{0pt}} 
+	{\hspace{0pt}\centering} 
+	{}{}
+	\xpatchcmd{\makehead}
+	{\namestyle{\@firstname~\@lastname}}
+	{\centering\namestyle{\@firstname~\@lastname}\par}
+	{}{}
+	\xpatchcmd{\makehead}
+	{\titlestyle{~|~\@title}}%
+	{\centering\vskip2ex\titlestyle{\@title}}%
+	{}{}
+	% 2. NEW STRATEGY: Patch to increase space before the \hline separator
+	\xpatchcmd{\makehead}
+	{\style}% Search for the horizontal rule (the separator)
+	{\vspace*{1.5em}\\\hline}% Replace with 1.5em space, a line break, and the rule
+	{}{}
+\makeatother
+%\setlength{\textheight}{9.5in}
+% \usepackage[table]{xcolor}
+%\usepackage[lmargin=0.5in, rmargin=1in, tmargin=0.5in, bmargin=0.5in]{geometry}
+%\renewcommand{\familydefault}{cmss}
+
+\name{Anthony}{Hicks III}
+\title{Senior Software Engineer}
+\email{ahicks3rd@gmail.com}
+\homepage{www.anthonyhicksiii.com}
+
 
 \begin{document}
-\name{Anthony Hicks III}
-\address{www.anthonyhicksiii.com}
-\address{ahicks3rd@gmail.com}
+\makecvtitle
+\section{Experience}
+\cventry{07/2022 - 03/2024}{Software Engineer}{Google}{}{}{}
+\begin{itemize}
+	\item Created a system to prevent breaking changes from entering Google Search's critical features, using Python, Java, gRPC, Google PubSub, and Google Protobufs.
+	\item Desgined and implemented the system to alert appropriate teams when their changes could break Google Search, system was integrated into the binary release processes. 
+	\item Created stakeholder dashboards to track the number of breaking changes that were prevented.
+	\item Led the team in the creation of our first stakeholder onboarding process and onboarded the first user to our infrastructure.
+	\item Automated the process of catching breaking changes that could affect Google Search's Generative AI.
+\end{itemize}
+\cventry{02/2021 - 07/2022}{Vice President of Software Engineering}{JPMorgan Chase \& Co.}{}{}{}
+\begin{itemize}
+	\item Mentored and helped guide junior developers and new hires on the team.
+	\item Responsible for debugging production issues as they arose using tools such as Dynatrace and Splunk. 
+	\item Integrated various technologies to meet product needs including, Java, Python, Scala, Pivotal Cloud Foundry, Spark, and Hadoop.	
+	\item Responsible ensuring our application maintained an SLO of 250 milliseconds even as we continued to scale to millions of customers.
+	\item Gathered requirements and prioritized features to ensure we met the expectations of our clients and stakeholders.
+	\item Designed, implemented, and maintained the ETL Spark jobs for the team.
+	\item Assisted with DEI recruitment and retention events.
+\end{itemize}
+\cventry{02/2020 - 02/2021}{Senior Associate - Software Engineer}{JPMorgan Chase \& Co.}{}{}{}
+\begin{itemize}
+	\item Part of a select group of people within the firm to work on the SBA PPP Loans project, the project helped automate the process of getting government loans to small businesses for support during the Covid-19
+pandemic, we helped get more than \$30 billion in loans processed.
+	\item Lead the development of multiple Scala based Spark jobs that do analytics and create KPI reports from our primary application.
+	\item Improved the scalability of our application as the number of customers grew over 55 million, ensuring our highly distributed system did not have an increase in latency as our customer size grew.
+	\item Created solutions that maintained our applications average response time at 250 milliseconds, as we surpassed more than 425 transactions per second.
+	\item Assisted with software engineering recruitment efforts for the firm, as well as, helped plan and run DEI efforts.
+	\item Selected out of an estimate of 30 participants for a weeklong professional program to better understand how to grow as leader.
+\end{itemize}
+\cventry{10/2017 - 02/2020}{Associate - Software Engineer}{JPMorgan Chase \& Co.}{}{}{}
+\begin{itemize}
+	\item Built a Java Spring Boot application from scratch that aggregated data from multiple Cassandra data stores 
+to give customers financial insight into their spending and investing habits.
+	\item Scaled the application to grow from supporting hundreds of customers to millions of customers by migrating our application onto the cloud.
+	\item Created the proof of concept that was used as the basis to move the application into a cloud environment.
+	\item Helped create a CI/CD pipeline for the application, which reduced our deployment time to production from a few hours to approximately 30 minutes.
+	\item Created the first CI/CD pipeline for Spark Jobs within our division in the firm, this was used as the basis for all CI/CD Spark Job pipelines within our division.
+	\item Taught multiple self-defense classes for internal employees.
+\end{itemize}
 
-\setlength\itemsep{0em}
-
-\begin{resume}
-\section{\large{Technologies}}
-\begin{tabular}{l	l	l 	l	l   l	l 	l 	l} 
-	Java  & Kafka   & gRPC & Cassandra  & Git & Linux & Protobufs & Pivot Cloud Foundry & Spring Boot \\ 
-	Scala & Spark 	& Pubsub & Python & Hadoop & Racket
+\section{Technologies}
+\begin{tabular}{p{90pt}p{90pt}p{90pt}p{90pt}p{90pt}} 
+	Java  & Kafka   & gRPC & Cassandra  & Git \\ [0.5ex]
+	Linux & Protobufs & Spring Boot & Scala & Spark \\ [0.5ex]
+	Pubsub & Python & Hadoop & Racket & %Pivotal Cloud Foundry
 \end{tabular}
 
 \section{\large{Skills}}
-\begin{tabular}{	l 	l 	l 	l	l 	}
-	Big Data Processing & Functional Programming & Highly Distributed Systems & NoSQL & Object-Oriented Programming 
+\begin{tabular}{p{200pt}p{200pt}}
+	Big Data Processing & Functional Programming \\ [0.5ex]
+	Highly Distributed Systems & NoSQL \\ [0.5ex]
+	Object-Oriented Programming 
 \end{tabular}
 
-\section{\large{Experience}}
-	\textbf{Software Engineer at Google}
-	\hfill{\bf 07/2022 - 03/2024}
-	\begin{itemize}
-		\item Created a system to prevent breaking changes from entering Google Search's critical features, using Python, Java, gRPC, Google PubSub, and Google Protobufs.
-		\item Desgined and implemented the system to alert appropriate teams when their changes could break Google Search, system was integrated into the binary release processes. 
-		\item Created stakeholder dashboards to track the number of breaking changes that were prevented.
-		\item Led the team in the creation of our first stakeholder onboarding process and onboarded the first user to our infrastructure.
-		\item Automated the process of catching breaking changes that could affect Google Search's Generative AI.
-	\end{itemize}
-	
-	\textbf{Vice President - Software Engineering at JPMorgan Chase \& Co.}
-	\hfill{\bf 02/2021 - 07/2022}
-	\begin{itemize}
-		\item Mentored and helped guide junior developers and new hires on the team.
-		\item Responsible for debugging production issues as they arose using tools such as Dynatrace and Splunk. 
-		\item Integrated various technologies to meet product needs including, Java, Python, Scala, Pivotal Cloud Foundry, Spark, and Hadoop.	
-		\item Responsible ensuring our application maintained an SLO of 250 milliseconds even as we continued to scale to millions of customers.
-		\item Gathered requirements and prioritized features to ensure we met the expectations of our clients and stakeholders.
-		\item Designed, implemented, and maintained the ETL Spark jobs for the team.
-		\item Assisted with DEI recruitment and retention events.
-	\end{itemize}
-	
-	\textbf{Senior Associate - Software Engineer at JPMorgan Chase \& Co.}
-	\hfill{\bf 02/2020 - 02/2021}
-	\begin{itemize}
-		\item Part of a select group of people within the firm to work on the SBA PPP Loans project, the project helped automate the process of getting government loans to small businesses for support during the Covid-19
-pandemic, we helped get more than \$30 billion in loans processed.
-		\item Lead the development of multiple Scala based Spark jobs that do analytics and create KPI reports from our primary application.
-		\item Improved the scalability of our application as the number of customers grew over 55 million, ensuring our highly distributed system did not have an increase in latency as our customer size grew.
-		\item Created solutions that maintained our applications average response time at 250 milliseconds, as we surpassed more than 425 transactions per second.
-		\item Assisted with software engineering recruitment efforts for the firm, as well as, helped plan and run DEI efforts.
-		\item Selected out of an estimate of 30 participants for a weeklong professional program to better understand how to grow as leader.
-	\end{itemize}
+\section{Languages}
+\cvitemwithcomment{Chinese (Mandarin)}{Limited Working Proficiency}{}
 
-	\textbf{Associate - Software Engineer at JPMorgan Chase \& Co.}
-	\hfill{\bf 10/2017 - 02/2020}
-	\begin{itemize}
-		\item Built a Java Spring Boot application from scratch that aggregated data from multiple Cassandra data stores 
-to give customers financial insight into their spending and investing habits.
-		\item Scaled the application to grow from supporting hundreds of customers to millions of customers by migrating our application onto the cloud.
-		\item Created the proof of concept that was used as the basis to move the application into a cloud environment.
-		\item Helped create a CI/CD pipeline for the application, which reduced our deployment time to production from a few hours to approximately 30 minutes.
-		\item Created the first CI/CD pipeline for Spark Jobs within our division in the firm, this was used as the basis for all CI/CD Spark Job pipelines within our division.
-		\item Taught multiple self-defense classes for internal employees.
-	\end{itemize}
-
-	\section{\large{Education}}
-	Illinois Institute of Technology \hfill
-	{\centering Computer Science} 
-	 \hfill August 2017 \\
-	Master's of Science and Bachelor's of Science \\
-	Applied Mathematics Minor \\
-	\newline
-	\newline
-	Cornell University \hfill September 2019 \\
-	Mahcine Learning Certificate
+\section{Education}
+\cventry{August 2017}{Master's of Science and Bachelor's of Science in Computer Science}{Illinois Institute of Technology}{}{}{}
+\cventry[1.5ex]{}{Minor in Applied Mathematics}{}{}{}{}
+\cventry[1.5ex]{September 2019}{Machine Learning Certificate}{Cornell University}{}{}{}
+\cventry{Summer 2014}{}{East Normal China University}{}{}{}
 	
-	\section{\large{Study Abroad}}
-	East China Normal University \hfill Summer 2014  
-	
-	\section{\large{Languages}}
-	Chinese (Mandarin) - Limited Working Proficiency
-\end{resume}
-
 \end{document}
