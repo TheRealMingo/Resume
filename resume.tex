@@ -1,111 +1,219 @@
-\documentclass[10pt]{moderncv}
-\moderncvcolor{blue}
-\moderncvstyle{banking}
-\nopagenumbers{}
-\usepackage{fullpage}
+%-------------------------
+% Resume in LaTeX
+% Based on sb2nov/resume (https://github.com/sb2nov/resume)
+% License: MIT
+%-------------------------
 
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage{xpatch}
-\makeatletter
-	\xpatchcmd{\makehead}
-	{\hspace{0pt}} 
-	{\hspace{0pt}\centering} 
-	{}{}
-	\xpatchcmd{\makehead}
-	{\namestyle{\@firstname~\@lastname}}
-	{\centering\namestyle{\@firstname~\@lastname}\par}
-	{}{}
-	\xpatchcmd{\makehead}
-	{\titlestyle{~|~\@title}}%
-	{\centering\vskip2ex\titlestyle{\@title}}%
-	{}{}
-	% 2. NEW STRATEGY: Patch to increase space before the \hline separator
-	\xpatchcmd{\makehead}
-	{\style}% Search for the horizontal rule (the separator)
-	{\vspace*{1.5em}\\\hline}% Replace with 1.5em space, a line break, and the rule
-	{}{}
-\makeatother
-\renewcommand*{\namefont}{\fontsize{28}{26}\mdseries\upshape}
-\renewcommand*{\titlefont}{\fontsize{24}{22}\mdseries\upshape}
-%\setlength{\textheight}{9.5in}
-% \usepackage[table]{xcolor}
-%\usepackage[lmargin=0.5in, rmargin=1in, tmargin=0.5in, bmargin=0.5in]{geometry}
-%\renewcommand{\familydefault}{cmss}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
 
-\name{Anthony}{Hicks III}
-\title{Senior Software Engineer}
-\email{ahicks3rd@gmail.com}
-\homepage{www.anthonyhicksiii.com}
+%----------FONT OPTIONS----------
+\usepackage[sfdefault]{roboto}
+\usepackage[T1]{fontenc}
 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+\setlength{\footskip}{14pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\renewcommand{\arraystretch}{1.1}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-2pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-1pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*, itemsep=2pt, topsep=3pt, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-\makecvtitle
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Anthony Hicks III} \\ \vspace{4pt}
+    {\large Senior Software Engineer} \\ \vspace{6pt}
+    \small \href{mailto:ahicks3rd@gmail.com}{\underline{ahicks3rd@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/anthonyhicksiii}{\underline{linkedin.com/in/anthonyhicksiii}} $|$
+    \href{https://www.anthonyhicksiii.com}{\underline{www.anthonyhicksiii.com}}
+\end{center}
+
+%-----------EXPERIENCE-----------
 \section{Experience}
-\cventry{05/2024 - Present}{Senior Lead Software Engineer}{JPMorgan Chase \& Co.}{}{}{}
-\begin{itemize}
-	\item Senior Lead Software Engineer of Big Data Streaming.
-	\item Tech lead for the modernization effort of JP Morgan Chase's advertising platform.
-	\item Lead 3 teams across 3 different time zones to plan, prioritize, and execute the platform features.
-	\item Do code reviews for the platform as well as contribute to the advancement of the platform.
-	\item Assist in translating product requirements to technical requirements for the platform.
-\end{itemize}
-\cventry{07/2022 - 03/2024}{Software Engineer}{Google}{}{}{}
-\begin{itemize}
-	\item Created a system to prevent breaking changes from entering Google Search's critical features, using Python, Java, gRPC, Google PubSub, and Google Protobufs.
-	\item Desgined and implemented the system to alert appropriate teams when their changes could break Google Search, system was integrated into the binary release processes. 
-	\item Created stakeholder dashboards to track the number of breaking changes that were prevented.
-	\item Led the team in the creation of our first stakeholder onboarding process and onboarded the first user to our infrastructure.
-	\item Automated the process of catching breaking changes that could affect Google Search's Generative AI.
-\end{itemize}
-\cventry{02/2021 - 07/2022}{Vice President of Software Engineering}{JPMorgan Chase \& Co.}{}{}{}
-\begin{itemize}
-	\item Mentored and helped guide junior developers and new hires on the team.
-	\item Responsible for debugging production issues as they arose using tools such as Dynatrace and Splunk. 
-	\item Integrated various technologies to meet product needs including, Java, Python, Scala, Pivotal Cloud Foundry, Spark, and Hadoop.	
-	\item Responsible ensuring our application maintained an SLO of 250 milliseconds even as we continued to scale to millions of customers.
-	\item Gathered requirements and prioritized features to ensure we met the expectations of our clients and stakeholders.
-	\item Designed, implemented, and maintained the ETL Spark jobs for the team.
-\end{itemize}
-\cventry{02/2020 - 02/2021}{Senior Associate - Software Engineer}{JPMorgan Chase \& Co.}{}{}{}
-\begin{itemize}
-	\item Part of a select group of people within the firm to work on the SBA PPP Loans project, the project helped automate the process of getting government loans to small businesses for support during the Covid-19
-pandemic, we helped get more than \$30 billion in loans processed.
-	\item Lead the development of multiple Scala based Spark jobs that do analytics and create KPI reports from our primary application.
-	\item Improved the scalability of our application as the number of customers grew over 55 million, ensuring our highly distributed system did not have an increase in latency as our customer size grew.
-	\item Created solutions that maintained our applications average response time at 250 milliseconds, as we surpassed more than 425 transactions per second.
-	\item Selected out of an estimate of 30 participants for a weeklong professional program to better understand how to grow as leader.
-\end{itemize}
-\cventry{10/2017 - 02/2020}{Associate - Software Engineer}{JPMorgan Chase \& Co.}{}{}{}
-\begin{itemize}
-	\item Built a Java Spring Boot application from scratch that aggregated data from multiple Cassandra data stores 
-to give customers financial insight into their spending and investing habits.
-	\item Scaled the application to grow from supporting hundreds of customers to millions of customers by migrating our application onto the cloud.
-	\item Created the proof of concept that was used as the basis to move the application into a cloud environment.
-	\item Helped create a CI/CD pipeline for the application, which reduced our deployment time to production from a few hours to approximately 30 minutes.
-	\item Created the first CI/CD pipeline for Spark Jobs within our division in the firm, this was used as the basis for all CI/CD Spark Job pipelines within our division.
-\end{itemize}
+  \resumeSubHeadingListStart
 
+    \resumeSubheading
+      {Senior Lead Software Engineer}{05/2024 -- Present}
+      {JPMorgan Chase \& Co.}{}
+      \resumeItemListStart
+        \resumeItem{Tech lead for 3 teams, totaling 20 engineers, across different time zones (CT, EST, IST), spearheading the modernization effort of JPMorgan Chase's advertising platform.}
+        \resumeItem{Collaborates with product teams to translate business requirements into technical deliverables.}
+        \resumeItem{Leads the development of an in-house application that replaces vendor tooling, accelerating the rate at which advertising campaigns are created.}
+        \resumeItem{Designed and shipped a domain-specific language (DSL) enabling external systems to automate audience targeting for advertising across the firm.}
+        \resumeItem{Reduced platform batch processing time by 75\% by optimizing the platform's AWS EMR Spark jobs, lowering job time from 6 hours to 1.5 hours.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer}{07/2022 -- 03/2024}
+      {Google}{}
+      \resumeItemListStart
+        \resumeItem{Created a system to prevent breaking changes from entering Google Search's critical features, using Python, Java, gRPC, Google PubSub, and Google Protobufs.}
+        \resumeItem{Designed and implemented an alerting system to notify teams of potential breaking changes entering Google Search.}
+        \resumeItem{Built stakeholder dashboards to track the number of breaking changes that were prevented.}
+        \resumeItem{Led the creation of the team's onboarding process and onboarded the first external user to the infrastructure.}
+        \resumeItem{Automated the process of catching breaking changes that could affect Google Search's Generative AI (AI Overview Section).}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Vice President of Software Engineering}{02/2021 -- 07/2022}
+      {JPMorgan Chase \& Co.}{}
+      \resumeItemListStart
+        \resumeItem{A lead for the firm's Personalization and Insights Team.}
+        \resumeItem{Designed, implemented, and maintained the team's ETL Spark jobs.}
+        \resumeItem{Used technologies, such as Java, Python, Scala, Pivotal Cloud Foundry, Spark, and Hadoop, to build the firm's Insights system.}
+        \resumeItem{Maintained an SLO of 250 milliseconds even as we continued to scale to millions of customers.}
+        \resumeItem{Built production debugging dashboards using Dynatrace and Splunk that reduced the time to identify and resolve incidents.}
+        \resumeItem{Gathered requirements and prioritized features to meet clients' and stakeholders' expectations.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Senior Associate -- Software Engineer}{02/2020 -- 02/2021}
+      {JPMorgan Chase \& Co.}{}
+      \resumeItemListStart
+        \resumeItem{Selected for the firm's initiative to automate the processing of the SBA PPP Loans, helping distribute \$30 billion to small businesses during the COVID-19 pandemic.}
+        \resumeItem{Led the development of multiple Scala-based Spark jobs that performed analytics and generated KPI reports from our primary application.}
+        \resumeItem{Scaled the team's application to over 55 million customers while maintaining an SLO of 250 milliseconds as we surpassed more than 425 transactions per second.}
+        \resumeItem{Selected out of an estimated 30 participants for a weeklong professional program to better understand how to grow as a leader.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Associate -- Software Engineer}{10/2017 -- 02/2020}
+      {JPMorgan Chase \& Co.}{}
+      \resumeItemListStart
+        \resumeItem{Built a Java Spring Boot application from scratch that aggregated data from multiple Cassandra data stores to give customers financial insight into their spending and investing habits.}
+        \resumeItem{Scaled the application from supporting hundreds of customers to supporting millions by migrating it to the cloud.}
+        \resumeItem{Created the proof of concept that was used as the basis for moving the application into a cloud environment.}
+        \resumeItem{Helped create a CI/CD pipeline for the application, which reduced our deployment time to production from a few hours to approximately 30 minutes.}
+        \resumeItem{Created the first CI/CD pipeline for Spark jobs within our division at the firm; this became the standard for all CI/CD Spark job pipelines within our division.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\newpage
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Personal AI Assistant}{Python, LangChain, Ollama}
+      {An Agentic AI Project}{\href{https://github.com/TheRealMingo/personal-assistance}{https://github.com/TheRealMingo/personal-assistance}}
+      \resumeItemListStart
+        \resumeItem{Built a multi-agent AI assistant using the supervisor/sub-agent architecture, orchestrating 7 specialized agents with local LLMs that have the following skills: task management, exercise tracking, weight tracking, weather, email, date and timezone computations, and STEM computation.}
+        \resumeItem{Designed a fully local inference pipeline running on constrained hardware (2GB VRAM), using sliding-window context management, agent-as-tool composition, and a YAML document store.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
 \section{Technologies}
-\begin{tabular}{p{90pt}p{90pt}p{90pt}p{90pt}p{90pt}} 
-	Java  & Kafka   & gRPC & Cassandra  & Git \\ [0.5ex]
-	Linux & Protobufs & Spring Boot & Scala & Spark \\ [0.5ex]
-	Pubsub & Python & Hadoop & Racket & %Pivotal Cloud Foundry
-\end{tabular}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:} Java, Python, Racket, Scala \\
+     \textbf{Batch Processing \& Streaming:} AWS EMR, Hadoop, Kafka, PubSub, Spark \\
+     \textbf{Protocols \& Frameworks:} gRPC, Protobufs, Spring Boot, LangChain \\
+     \textbf{Databases:} Cassandra, DuckDB, SQL \\
+     \textbf{Cloud:} AWS, Pivotal Cloud Foundry \\
+     \textbf{Other Tools:} Git, Linux
+    }}
+ \end{itemize}
 
-\section{\large{Skills}}
-\begin{tabular}{p{200pt}p{200pt}}
-	Big Data Processing & Functional Programming \\ [0.5ex]
-	Highly Distributed Systems & NoSQL \\ [0.5ex]
-	Object-Oriented Programming 
-\end{tabular}
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Big Data Processing $\cdot$
+     Functional Programming $\cdot$
+     Highly Distributed Systems $\cdot$
+     Microservices $\cdot$
+     NoSQL $\cdot$
+     Object-Oriented Programming $\cdot$
+     RESTful Services
+    }}
+ \end{itemize}
 
+%-----------LANGUAGES-----------
 \section{Languages}
-\cvitemwithcomment{Chinese (Mandarin)}{Limited Working Proficiency}{}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Chinese (Mandarin):} Limited Working Proficiency
+    }}
+ \end{itemize}
 
+%-----------EDUCATION-----------
 \section{Education}
-\cventry{August 2017}{Master's of Science and Bachelor's of Science in Computer Science}{Illinois Institute of Technology}{}{}{}
-\cventry[1.5ex]{}{Minor in Applied Mathematics}{}{}{}{}
-\cventry[1.5ex]{September 2019}{Machine Learning Certificate}{Cornell University}{}{}{}
-\cventry{Summer 2014}{Accelerated Chinese Language Program}{East Normal China University}{}{}{}
-	
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Illinois Institute of Technology}{}
+      {Master of Science and Bachelor of Science in Computer Science; Minor in Applied Mathematics}{August 2017}
+    \resumeSubheading
+      {Cornell University}{}
+      {Machine Learning Certificate}{September 2019}
+    \resumeSubheading
+      {East China Normal University}{}
+      {Accelerated Chinese Language Program}{Summer 2014}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
 \end{document}

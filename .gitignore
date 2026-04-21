@@ -6,3 +6,4 @@
 *.latexmk
 *.fls
 .DS_Store
+docs/
